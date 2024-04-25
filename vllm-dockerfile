@@ -1,0 +1,42 @@
+FROM ubuntu:22.04
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DO_NOT_TRACK=1 \
+    VLLM_NO_USAGE_STATS=1 \
+    LANGCHAIN_TRACING_V2=true \
+    LANGCHAIN_API_KEY=insert_key_here \
+    LANGCHAIN_PROJECT=default
+
+WORKDIR /app
+COPY ./app  /app
+
+RUN apt-get update && apt-get -y upgrade \
+    && apt-get install -y --no-install-recommends \
+    git \
+    wget \
+    g++ \
+    ca-certificates \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/miniconda3/bin:${PATH}"
+ARG PATH="/root/miniconda3/bin:${PATH}"
+
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &&\
+    mkdir /root/.conda && \
+    bash Miniconda3-latest-Linux-x86_64.sh -b &&\
+    rm -f Miniconda3-latest-Linux-x86_64.sh &&\
+    echo "Running $(conda --version)" && \
+    conda init bash && \
+    . /root/.bashrc && \
+    conda update conda && \
+    conda create -n py3 && \
+    conda activate py3 && \
+    conda install python=3.11 pip && \
+    pip install vllm openai langchain_openai langchain langchainhub neo4j streamlit sentence-transformers chromadb
+
+EXPOSE 3000
+EXPOSE 8501
+
+CMD [ "/bin/bash","-c","tail -f /dev/null" ]

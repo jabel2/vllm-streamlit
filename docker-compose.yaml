@@ -1,0 +1,56 @@
+services:
+  vllm:
+    container_name: vllm
+    build: 
+      context: .
+      dockerfile: vllm-dockerfile
+    networks:
+      - mynetwork
+    volumes:
+      - ./app:/app
+    ports:
+    - "3000:3000"
+    - "8501:8501"
+    working_dir: /app
+    deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                device_ids: ['0']
+                capabilities: [gpu]
+
+  neo4j:
+    container_name: neo4j
+    image: neo4j:latest
+    networks:
+      - mynetwork
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./neo4j/data:/var/lib/neo4j/data
+      - ./neo4j/import:/var/lib/neo4j/import
+      - ./neo4j/plugins:/var/lib/neo4j/plugins
+      - ./neo4j/licenses:/var/lib/neo4j/licenses
+    environment:
+      - name=neo4j
+      - NEO4J_AUTH=neo4j/neo4juser
+      - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
+      - NEO4J_dbms_memory_pagecache_size=4G
+      - NEO4J_server_memory_heap_max__size=4G
+      - NEO4JLABS_PLUGINS=["graph-data-science","apoc","bloom"]
+      - NEO4J_dbms_security_procedures_unrestricted=gds.*
+      - NEO4J_dbms_security_procedures_unrestricted=bloom.*
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.coll.*,apoc.load.*,apoc.*
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_DEBUG=yes
+
+networks:
+  mynetwork:
+
+#conda activate py3.11
+#python -m vllm.entrypoints.openai.api_server --model MaziyarPanahi/Meta-Llama-3-8B-Instruct-GPTQ --quantization gptq --host 0.0.0.0 --port 3000

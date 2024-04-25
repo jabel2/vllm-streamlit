@@ -1,0 +1,57 @@
+SECURITIES AND EXCHANGE COMMISSION
+17 CFR Parts 275 and 279
+[Release No. IA-6578; File No. S7-13-23]
+RIN 3235-AN31
+Exemption for Certain Investment Advisers Operating Through the Internet
+AGENCY: Securities and Exchange Commission.
+ACTION: Final rule.
+SUMMARY: The Securities and Exchange Commission (“SEC” or “Commission”) is adopting
+amendments to the rule under the Investment Advisers Act of 1940 that exempts certain
+investment advisers that provide advisory services through the internet (“internet investment
+advisers”) from the prohibition on Commission registration, as well as related amendments to
+Form ADV. The amendments are designed to modernize the rule’s conditions to account for the
+evolution in technology and the investment advisory industry since the initial adoption of the rule
+in 2002.
+DATES: Effective date: This rule is effective [INSERT DATE 90 DAYS AFTER DATE OF
+PUBLICATION IN THE FEDERAL REGISTER].
+Compliance dates: See section II.EII.E of this release.
+FOR FURTHER INFORMATION CONTACT: Blair B. Burnett, Branch Chief, Investment
+Company Regulation Office, Herman Brown, Senior Counsel, Sirimal R. Mukerjee, Senior
+Special Counsel, or Melissa Roverts Harke, Assistant Director, Investment Adviser Regulation
+Office, Division of Investment Management, at (202) 551-6787 or IArules@sec.gov, Securities
+and Exchange Commission, 100 F Street NE, Washington, DC 20549-8549.
+2
+SUPPLEMENTARY INFORMATION: The Commission is adopting amendments to 17 CFR
+275.203A-2(e) (“rule 203A-2(e)” or “Internet Adviser Exemption”) under the Investment
+Advisers Act of 1940 (“Advisers Act” or “Act”) [15 U.S.C. 80b-1 et seq.] and corresponding
+amendments to 17 CFR 279.1 (“Form ADV”) under the Advisers Act.1
+I. Introduction
+A. Overview
+We are adopting amendments to rule 203A-2(e) under the Advisers Act. The Internet
+Adviser Exemption provides an exemption from the prohibition on registration with the
+Commission that may otherwise affect certain advisers seeking to register with us. The
+amendments are designed to modernize the Internet Adviser Exemption’s conditions to account
+for the evolution in technology and the investment advisory industry since the adoption of the
+rule over 20 years ago. Specifically, the amendments will require an internet investment adviser
+to provide investment advice to all of its clients exclusively through an “operational” interactive
+website at all times during which it relies on the Internet Adviser Exemption. The amendments
+also will eliminate the de minimis exception in the current rule that permits internet investment
+advisers to have fewer than 15 non-internet clients in the preceding 12-month period. In addition,
+we are adopting amendments to Form ADV to conform certain instructions and definitions to the
+amended Internet Adviser Exemption and to require additional representations regarding an
+internet investment adviser’s reliance on the rule.
+In July 2023, the Commission proposed amendments to the Internet Adviser Exemption
+with certain corresponding amendments to Form ADV.2 The Commission received eight
+comments on the proposed amendments.3 Most commenters expressed broad support for the
+2 See Exemption for Certain Investment Advisers Operating Through the Internet, Investment Advisers Act
+Release No. 6354 (July 26, 2023) [88 FR 50076 (Aug. 1, 2023)] (“Proposing Release”). See also Request
+for Information and Comments on Broker-Dealer and Investment Adviser Digital Engagement Practices,
+Related Tools and Methods, and Regulatory Considerations and Potential Approaches, Exchange Act
+Release No. 92766 (Aug. 27, 2021) [86 FR 49067 (Sept. 1, 2021)] (a request for information and comments
+issued by the Commission in 2021 on the Internet Adviser Exemption, among other areas).
+3 The comment letters on the Proposing Release are available at https://www.sec.gov/comments/s7-13-
+23/s71323.htm.
+5
+proposal while a few commenters suggested modifications.4 One commenter disagreed with the
+proposal in its entirety.5 After consideration of the comments received and as discussed in more
+detail below, we are adopting the amendments to the Internet Adviser Exemption, as proposed.
